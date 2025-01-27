@@ -8,6 +8,7 @@
                 <th>ID</th>
                 <th>Nombre de Usuario</th>
                 <th>Rol</th>
+                <th>Rubro</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -15,6 +16,7 @@
             <tr *ngFor="let user of users">
                 <td>{{ user.user_id }}</td>
                 <td>{{ user.username }}</td>
+                <td>{{ user.rubro }}</td>
                 <td>{{ user.role }}</td>
                 <td>
                     <button (click)="editUser(user)">Editar</button>

@@ -1,0 +1,30 @@
+<div class="supplier-container">
+    <h1>Gestión de Proveedores</h1>
+    <button (click)="addSupplier()">Agregar Proveedor</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Teléfono</th>
+                <th>Email</th>
+                <th>Rubro</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let supplier of suppliers">
+                <td>{{ supplier.supplier_id }}</td>
+                <td>{{ supplier.name }}</td>
+                <td>{{ supplier.phone }}</td>
+                <td>{{ supplier.email }}</td>
+                <td>{{ supplier.rubro }}</td>
+                <td>
+                    <button (click)="editSupplier(supplier)">Editar</button>
+                    <button (click)="deleteSupplier(supplier.supplier_id)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
